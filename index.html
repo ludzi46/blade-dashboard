@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Incident Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="dashboard">
+    <h1>Incident Dashboard</h1>
+
+<div class="filters">
+
+    <label for="startDate">
+        Start date:
+    </label>
+
+    <input type="date" id="startDate">
+
+    <label for="endDate">
+        End date:
+    </label>
+
+    <input type="date" id="endDate">
+
+    <label for="severity">
+        Severity:
+    </label>
+
+    <select id="severity">
+        <option value="">All</option>
+        <option value="LOW">LOW</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="HIGH">HIGH</option>
+    </select>
+
+    <label for="threatClassification">
+    Threat Classification:
+</label>
+
+<select id="threatClassification">
+    <option value="">All</option>
+    <option value="BENIGN">BENIGN</option>
+    <option value="MALICIOUS">MALICIOUS</option>
+</select>
+
+<label for="alertVerdict">
+    Alert Verdict:
+</label>
+
+<select id="alertVerdict">
+    <option value="">All</option>
+    <option value="FALSE POSITIVE">FALSE POSITIVE</option>
+    <option value="TRUE POSITIVE">TRUE POSITIVE</option>
+</select>
+
+</div>
+
+<button id="calculateButton">
+    Calculate incidents
+</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date and Time</th>
+                    <th>Number of incidents</th>
+                </tr>
+            </thead>
+
+            <tbody id="incidentTableBody">
+            </tbody>
+        </table>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
